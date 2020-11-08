@@ -1,0 +1,9 @@
+# restart jitsi services
+
+- name: "restarting jitsi services"
+  service:
+    name: "{{ item }}"
+    state: restarted
+  with_items:
+    - jicofo
+    - jitsi-videobridge2

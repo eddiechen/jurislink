@@ -1,0 +1,6 @@
+# restart haproxy service
+
+- name: "restarting haproxy service"
+  service:
+    name: haproxy
+    state: restarted
