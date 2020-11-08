@@ -1,2 +1,17 @@
 ---
 # tasks file for process_mon
+
+- name: Process info
+  ignore_errors: yes
+  shell: "ps -aux |grep java |grep jvb"
+  register: process
+
+- name: Process CPU utilization
+  ignore_errors: yes
+  shell: "ps -aux |grep java |grep jvb |awk '{print $3}"
+  register: process_cpu
+
+- name: Process memory utilization
+  ignore_errors: yes
+  shell: "ps -aux |grep java |grep jvb|awk '{print $4}"
+  register: process_memory
