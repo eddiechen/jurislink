@@ -1,2 +1,8 @@
 ---
 # tasks file for jitsi_restart
+
+- import_tasks: jitsi_services.yml
+  tags: jitsi_services
+
+- import_tasks: haproxy_service.yml
+  tags: haproxy_service
