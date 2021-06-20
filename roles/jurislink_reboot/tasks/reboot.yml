@@ -1,2 +1,5 @@
+---
+# tasks file for reboot
+
 - name: "Rebooting server"
   reboot:
