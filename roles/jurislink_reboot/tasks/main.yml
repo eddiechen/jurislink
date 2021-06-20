@@ -1,9 +1,9 @@
 ---
 # tasks file for jurislink_reboot
 
-- name: Prevent run without tags
-  fail:
-    msg: "You must run this playbook with tags!"
+#- name: Prevent run without tags
+#  fail:
+#    msg: "You must run this playbook with tags!"
 
 - import_tasks: reboot.yml
   tags: reboot
